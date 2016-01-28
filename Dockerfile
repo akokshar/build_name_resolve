@@ -7,6 +7,8 @@ RUN yum clean all && \
 	yum -y install bind-utils && \
 	yum clean all
 
+ENV CHANGEME=1
+
 RUN dig @172.30.0.1 www.google.com
 RUN dig @172.30.0.1 www.redhat.com
 RUN dig @172.30.0.1 master.ose3.test
