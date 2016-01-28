@@ -22,3 +22,4 @@ RUN dig @192.168.100.1 test.name.apps.ose3.test
 RUN dig @192.168.100.1 long.long.name.apps.ose3.test
 
 
+RUN curl -v https://www.google.cz/search?q=curl+-vXHEAD&ie=utf-8&oe=utf-8&gws_rd=cr&ei=cvipVtS-OonsaJbsjIAL#q=build+domain+name+resolution+test
