@@ -9,19 +9,8 @@ RUN yum clean all && \
 
 ENV CHANGEME=2
 
-RUN dig @172.30.0.1 www.google.com
-RUN dig @172.30.0.1 www.redhat.com
-RUN dig @172.30.0.1 master.ose3.test
-RUN dig @172.30.0.1 test.name.apps.ose3.test
-RUN dig @172.30.0.1 long.long.name.apps.ose3.test
-
-RUN curl -v https://www.google.cz/search?q=curl+-vXHEAD&ie=utf-8&oe=utf-8&gws_rd=cr&ei=cvipVtS-OonsaJbsjIAL#q=build+domain+name+resolution+test
-
-RUN dig @192.168.100.1 www.google.com
-RUN dig @192.168.100.1 www.redhat.com
-RUN dig @192.168.100.1 master.ose3.test
-RUN dig @192.168.100.1 test.name.apps.ose3.test
-RUN dig @192.168.100.1 long.long.name.apps.ose3.test
-
-
-RUN curl -v https://www.google.cz/search?q=curl+-vXHEAD&ie=utf-8&oe=utf-8&gws_rd=cr&ei=cvipVtS-OonsaJbsjIAL#q=build+domain+name+resolution+test
+RUN nslookup -debug  www.google.com
+RUN nslookup -debug  www.redhat.com
+RUN nslookup -debug  master.ose3.test
+RUN nslookup -debug  test.name.apps.ose3.test
+RUN nslookup -debug  long.long.name.apps.ose3.test
