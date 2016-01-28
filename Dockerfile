@@ -1,10 +1,10 @@
 FROM rhel7
 
-RUN yum clean all \
+RUN yum clean all && \
 	yum-config-manager --disable rhel-sjis-for-rhel-7-server-rpms && \
 	yum-config-manager --enable rhel-7-server-extras-rpms && \
 	yum-config-manager --enable rhel-7-server-rpms && \
-	yum -y install bind-utils \
+	yum -y install bind-utils && \
 	yum clean all
 
 RUN dig @172.30.0.1 www.google.com
