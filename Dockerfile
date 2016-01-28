@@ -9,7 +9,7 @@ RUN yum clean all && \
 
 ENV CHANGEME=3
 
-RUN cat /etc/resolve.conf
+RUN cat /etc/resolv.conf
 
 RUN nslookup -debug  www.google.com
 RUN nslookup -debug  www.redhat.com
